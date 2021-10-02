@@ -1,0 +1,1 @@
+export { WaveFrame } from './WaveFrame'

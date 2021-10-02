@@ -1,5 +1,9 @@
 {
   "extends": [
     "stylelint-config-smarthr"
-  ]
+  ],
+  "rules": {
+    "font-family-name-quotes": null,
+    "font-family-no-missing-generic-family-keyword": null
+  }
 }
