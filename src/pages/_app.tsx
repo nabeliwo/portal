@@ -3,7 +3,7 @@ import { AppProps } from 'next/app'
 
 const App: FC<AppProps> = ({ Component }) => (
   <div>
-    <h1>wiki</h1>
+    <h1>portal</h1>
     <div>
       <Component />
     </div>
