@@ -26,7 +26,7 @@ const Page: VFC<Props> = ({ siteMap, content }) => {
 
   return (
     <>
-      <Head title="hoge" description="fuga" />
+      <Head title={content.title} description={content.description} />
       <Post content={content} categoryName={categoryName} siteMap={siteMap} isCategoryTopPage={isCategoryTopPage} />
     </>
   )
