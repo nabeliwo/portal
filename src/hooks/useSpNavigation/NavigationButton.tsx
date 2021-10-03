@@ -9,9 +9,10 @@ type Props = {
 
 export const NavigationButton: VFC<Props> = ({ onClick }) => (
   <Wrapper onClick={onClick}>
-    <span />
-    <span />
-    <span />
+    <span className="bar" />
+    <span className="bar" />
+    <span className="bar" />
+    <span className="visuallyHidden">ナビゲーションメニューを開く</span>
   </Wrapper>
 )
 
@@ -27,7 +28,7 @@ const Wrapper = styled.button`
     display: none;
   }
 
-  & > span {
+  & > .bar {
     position: absolute;
     left: 0;
     width: 22px;
@@ -43,5 +44,18 @@ const Wrapper = styled.button`
     &:nth-child(3) {
       top: 21px;
     }
+  }
+  & > .visuallyHidden {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 `

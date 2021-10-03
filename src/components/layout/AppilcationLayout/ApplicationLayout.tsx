@@ -160,7 +160,7 @@ const shake = keyframes`
   }
 `
 const CanvasWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -188,6 +188,7 @@ const Inner = styled.div`
   box-sizing: border-box;
 
   @media screen and (max-width: ${media.BREAK_POINT}px) {
+    height: auto;
     padding: ${space.XS}px ${space.XS}px 0;
   }
 `
