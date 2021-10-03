@@ -1,12 +1,35 @@
-import React from 'react'
-import styled from 'styled-components'
+import { GetStaticProps } from 'next'
+import React, { VFC } from 'react'
 
-import { space } from '../constants/theme'
+import { Content, getContent, getSiteMap } from '../libs/content'
 
-const Home = () => <Wrapper>Hello, world.</Wrapper>
+import { Head } from '../components/model/Head'
+import { Post } from '../components/model/Post'
+
+type Props = {
+  content: Content
+}
+
+const Home: VFC<Props> = ({ content }) => {
+  return (
+    <>
+      <Head />
+      <Post content={content} isTopPage />
+    </>
+  )
+}
 
 export default Home
 
-const Wrapper = styled.div`
-  padding: ${space.L}px;
-`
+export const getStaticProps: GetStaticProps = async () => {
+  const siteMap = getSiteMap()
+  const topPagePath = '/'
+  const content = await getContent(topPagePath)
+
+  return {
+    props: {
+      siteMap,
+      content,
+    },
+  }
+}

@@ -1,23 +1,20 @@
 import React, { FC } from 'react'
 import { AppProps } from 'next/app'
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 
+import { SiteMapItem } from '../libs/content'
 import { color, media } from '../constants/theme'
 
-import { WaveFrame } from '../components/effect/WaveFrame'
+import { ApplicationLayout } from '../components/layout/AppilcationLayout'
 
-const App: FC<AppProps> = ({ Component }) => (
+const App: FC<AppProps> = ({ Component, pageProps }) => (
   <>
     <GlobalStyle />
 
-    <CanvasWrapper>
-      <WaveFrame />
-    </CanvasWrapper>
-
-    <Container>
-      <Component />
-    </Container>
+    <ApplicationLayout siteMap={pageProps.siteMap as SiteMapItem[]}>
+      <Component {...pageProps} />
+    </ApplicationLayout>
   </>
 )
 
@@ -28,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'PixelMplus10-Regular';
-    src: url('/font/PixelMplus10-Regular.otf') format('opentype');
+    src: url('/fonts/PixelMplus10-Regular.otf') format('opentype');
   }
 
   html {
@@ -67,14 +64,4 @@ const GlobalStyle = createGlobalStyle`
       background-color: ${color.BLUE};
     }
   }
-`
-const Container = styled.div`
-  position: relative;
-`
-const CanvasWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 `
