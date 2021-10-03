@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "lint:ts": "eslint 'src/**/*.ts{,x}'",
     "lint:style": "stylelint 'src/**/*.ts{,x}'",
     "lint": "run-p lint:*",
