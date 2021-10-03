@@ -17,7 +17,9 @@ export const Navigation: VFC<Props> = ({ siteMap }) => {
 
   let currentPath = '/'
 
-  if (category && Array.isArray(category) && category.length >= 1) {
+  if (router.pathname === '/404') {
+    currentPath = '/404'
+  } else if (category && Array.isArray(category) && category.length >= 1) {
     currentPath = `/${category[0]}`
   }
 

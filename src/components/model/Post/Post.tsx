@@ -16,7 +16,7 @@ type Props = {
 
 export const Post: VFC<Props> = ({ content, categoryName = '', siteMap, isTopPage = false, isCategoryTopPage = false }) => (
   <>
-    {!isTopPage && <Headline as={isCategoryTopPage ? 'h1' : undefined}>{categoryName}</Headline>}
+    {!isTopPage && <CategoryTitle as={isCategoryTopPage ? 'h1' : undefined}>{categoryName}</CategoryTitle>}
 
     {siteMap && (
       <NavigationWrapper>
@@ -24,28 +24,44 @@ export const Post: VFC<Props> = ({ content, categoryName = '', siteMap, isTopPag
       </NavigationWrapper>
     )}
 
+    {!isTopPage && !isCategoryTopPage && <Headline>{content.title}</Headline>}
+
     <Html dangerouslySetInnerHTML={{ __html: content.contentHtml }} />
   </>
 )
 
-const Headline = styled.p`
+const CategoryTitle = styled.p`
   margin-bottom: ${space.S}px;
-  font-size: ${fontSize.XL};
+  font-size: ${fontSize.XXL};
   line-height: 1;
 
   @media screen and (max-width: ${media.BREAK_POINT}px) {
-    font-size: ${fontSize.L};
+    font-size: ${fontSize.XL};
   }
 `
 const NavigationWrapper = styled.div`
   &:not(:empty) {
-    margin-bottom: ${space.S}px;
+    margin-bottom: ${space.L}px;
+
+    @media screen and (max-width: ${media.BREAK_POINT}px) {
+      margin-bottom: ${space.M}px;
+    }
+  }
+`
+const Headline = styled.h1`
+  margin-bottom: ${space.L}px;
+  font-size: ${fontSize.XXL};
+  line-height: 1;
+
+  @media screen and (max-width: ${media.BREAK_POINT}px) {
+    margin-bottom: ${space.M}px;
+    font-size: ${fontSize.XL};
   }
 `
 const Html = styled.div`
   overflow-y: auto;
   flex: 1;
-  padding-bottom: ${space.M}px;
+  padding-bottom: ${space.L}px;
   line-height: 1.8;
 
   h2 {

@@ -1,6 +1,8 @@
 export const color = {
   BLACK: '#131816',
+  GREY: '#2f2f2f',
   BLUE: '#5ED2F9',
+  LIGHT_BLUE: '#29a7d1',
 }
 
 const BREAK_POINT = 890
@@ -21,5 +23,6 @@ export const fontSize = {
   S: '0.8rem',
   M: '1rem',
   L: '1.2rem',
-  XL: '1.6rem',
+  XL: '1.4rem',
+  XXL: '1.6rem',
 }
