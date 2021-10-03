@@ -8,11 +8,14 @@ import { color } from '../../../constants/theme'
 import { NavigationItem } from './NavigationItem'
 
 type Props = {
-  siteMap: SiteMapItem[]
+  siteMap?: SiteMapItem[]
 }
 
 export const Navigation: VFC<Props> = ({ siteMap }) => {
   const router = useRouter()
+
+  if (!siteMap) return null
+
   const category = router.query.category
 
   let currentPath = '/'
