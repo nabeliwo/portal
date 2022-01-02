@@ -24,8 +24,8 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
 
   @font-face {
-    font-family: 'PixelMplus10-Regular';
-    src: url('/fonts/PixelMplus10-Regular.otf') format('opentype');
+    font-family: 'PixelMplus12-Regular';
+    src: url('/fonts/PixelMplus12-Regular.otf') format('opentype');
   }
 
   html {
@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     background: repeating-linear-gradient(to bottom, ${color.BLACK}, ${color.BLACK} 3px, ${color.GREY} 3px, ${color.GREY} 5px);
     color: ${color.BLUE};
-    font-family: PixelMplus10-Regular, system-ui, sans-serif;
+    font-family: PixelMplus12-Regular, system-ui, sans-serif;
     letter-spacing: 1px;
   }
   a {

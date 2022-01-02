@@ -169,7 +169,7 @@ const FooterButtonList = styled.ul`
   }
 `
 const FooterButton = styled.button`
-  font-family: 'PixelMplus10-Regular';
+  font-family: 'PixelMplus12-Regular';
   font-size: ${fontSize.M};
   text-decoration: underline;
 `
