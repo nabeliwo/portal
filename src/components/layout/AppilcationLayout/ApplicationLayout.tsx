@@ -29,7 +29,7 @@ export const ApplicationLayout: VFC<Props> = ({ siteMap, children }) => {
         <Inner>
           <Header>
             <SiteTitle />
-            {navigationButton}
+            <NavigationWrapper>{navigationButton}</NavigationWrapper>
           </Header>
 
           <Content>
@@ -107,6 +107,19 @@ const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     margin-bottom: ${space.S}px;
+  }
+`
+const NavigationWrapper = styled.div`
+  display: none;
+  z-index: 10;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background: repeating-linear-gradient(to bottom, ${color.BLACK}, ${color.BLACK} 3px, ${color.GREY} 3px, ${color.GREY} 5px);
+
+  @media screen and (max-width: ${media.BREAK_POINT}px) {
+    display: block;
   }
 `
 const Content = styled.div`
