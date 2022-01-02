@@ -1,4 +1,4 @@
-import { color, media, space } from '../../../constants/theme'
+import { media, space } from '../../../constants/theme'
 import { WaveLineRenderer } from './WaveLineRenderer'
 
 const MAX_FRAME = 100000
