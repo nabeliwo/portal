@@ -17,7 +17,7 @@ type Props = {
 }
 
 export const ApplicationLayout: VFC<Props> = ({ siteMap, children }) => {
-  const { isClicked, navigationButton, elements } = useSpNavigation(siteMap)
+  const { navigationButton, elements } = useSpNavigation(siteMap)
 
   return (
     <>
@@ -25,7 +25,7 @@ export const ApplicationLayout: VFC<Props> = ({ siteMap, children }) => {
         <WaveFrame />
       </CanvasWrapper>
 
-      <Container className={isClicked ? 'shake' : ''}>
+      <Container>
         <Inner>
           <Header>
             <SiteTitle />
@@ -70,95 +70,6 @@ export const ApplicationLayout: VFC<Props> = ({ siteMap, children }) => {
   )
 }
 
-const shake = keyframes`
-  9% {
-    transform: translate(0%, 0%);
-  }
-  10% {
-    transform: translate(-2%, -2%);
-  }
-  12% {
-    transform: translate(-2%, -2%);
-  }
-  13% {
-    transform: translate(0%, 0%);
-  }
-  20% {
-    transform: translate(0%, 0%);
-  }
-  21% {
-    transform: translate(2%, 0%);
-  }
-  23% {
-    transform: translate(2%, 0%);
-  }
-  24% {
-    transform: translate(0%, 0%);
-  }
-  40% {
-    transform: translate(0%, 0%);
-  }
-  41% {
-    transform: translate(-2%, 0%);
-  }
-  55% {
-    transform: translate(-2%, 0%);
-  }
-  56% {
-    transform: translate(0%, 0%);
-  }
-  65% {
-    transform: translate(0%, 0%);
-  }
-  66% {
-    transform: translate(-2%, 2%);
-  }
-  68% {
-    transform: translate(-2%, 2%);
-  }
-  69% {
-    transform: translate(2%, -2%);
-  }
-  71% {
-    transform: translate(2%, -2%);
-  }
-  72% {
-    transform: translate(-2%, 0%);
-  }
-  74% {
-    transform: translate(-2%, 0%);
-  }
-  75% {
-    transform: translate(2%, 2%);
-  }
-  77% {
-    transform: translate(2%, 2%);
-  }
-  78% {
-    transform: translate(-2%, -2%);
-  }
-  80% {
-    transform: translate(-2%, -2%);
-  }
-  81% {
-    transform: translate(2%, 0%);
-  }
-  83% {
-    transform: translate(2%, 0%);
-  }
-  84% {
-    transform: translate(0%, 0%);
-  }
-  90% {
-    transform: translate(0%, 0%);
-  }
-  91% {
-    transform: translate(10%, 0%);
-  }
-  100% {
-    transform: translate(10%, 0%);
-  }
-`
 const CanvasWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -174,10 +85,6 @@ const Container = styled.div`
 
   @media screen and (max-width: ${media.BREAK_POINT}px) {
     padding: ${space.XS}px;
-  }
-
-  &.shake {
-    animation: ${shake} 2s forwards;
   }
 `
 const Inner = styled.div`
