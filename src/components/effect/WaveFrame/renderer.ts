@@ -33,8 +33,7 @@ export const renderer = (canvas: HTMLCanvasElement) => {
   const clearCanvas = () => {
     if (!ctx) return
 
-    ctx.fillStyle = color.BLACK
-    ctx.fillRect(0, 0, canvasWidth, canvasHeight)
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight)
     ctx.beginPath()
   }
 

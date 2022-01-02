@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     min-height: 100%;
-    background-color: ${color.BLACK};
+    background: repeating-linear-gradient(to bottom, ${color.BLACK}, ${color.BLACK} 3px, ${color.GREY} 3px, ${color.GREY} 5px);
     color: ${color.BLUE};
     font-family: PixelMplus10-Regular, system-ui, sans-serif;
     letter-spacing: 1px;

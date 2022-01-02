@@ -45,7 +45,13 @@ const Item = styled.span`
 
   &.active,
   &:hover {
-    background-color: ${color.BLUE};
+    background: repeating-linear-gradient(
+      to bottom,
+      ${color.BLUE},
+      ${color.BLUE} 3px,
+      ${color.LIGHT_BLUE} 3px,
+      ${color.LIGHT_BLUE} 5px
+    );
     color: ${color.BLACK};
 
     &::before {

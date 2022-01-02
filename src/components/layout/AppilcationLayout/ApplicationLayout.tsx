@@ -1,6 +1,6 @@
 import React, { ReactNode, VFC } from 'react'
 import Link from 'next/link'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 import { service } from '../../../constants/application'
 import { color, fontSize, media, space } from '../../../constants/theme'
