@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import remarkExternalLinks from 'remark-external-links'
 
 export type Content = {
   title: string
@@ -110,7 +111,10 @@ export const getContent = async (currentPath: string) => {
 
   const fileContent = fs.readFileSync(filePath.fileFullPath, 'utf8')
   const matterResult = matter(fileContent)
-  const processedContent = await remark().use(html, { sanitize: false }).process(matterResult.content)
+  const processedContent = await remark()
+    .use(remarkExternalLinks, { target: '_blank', rel: ['nofollow', 'noreferrer'] })
+    .use(html, { sanitize: false })
+    .process(matterResult.content)
   const contentHtml = processedContent.toString()
 
   return {
