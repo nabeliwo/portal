@@ -108,6 +108,7 @@ const Container = styled.div`
   box-sizing: border-box;
 
   &.simpleMode {
+    background-color: ${color.BLACK};
     font-family: system-ui, sans-serif;
   }
 
