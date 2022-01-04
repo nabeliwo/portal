@@ -41,7 +41,7 @@ const CategoryTitle = styled.p`
 `
 const NavigationWrapper = styled.div`
   &:not(:empty) {
-    margin-bottom: ${space.L}px;
+    margin-bottom: ${space.XL}px;
 
     @media screen and (max-width: ${media.BREAK_POINT}px) {
       margin-bottom: ${space.M}px;
@@ -49,7 +49,7 @@ const NavigationWrapper = styled.div`
   }
 `
 const Headline = styled.h1`
-  margin-bottom: ${space.L}px;
+  margin-bottom: ${space.XL}px;
   font-size: ${fontSize.XXL};
   line-height: 1;
 
@@ -61,11 +61,15 @@ const Headline = styled.h1`
 const Html = styled.div`
   overflow-y: auto;
   flex: 1;
-  padding-bottom: ${space.L}px;
+  padding-bottom: ${space.XL}px;
   line-height: 1.8;
 
+  @media screen and (max-width: ${media.BREAK_POINT}px) {
+    overflow-y: visible;
+  }
+
   h2 {
-    margin: ${space.M}px 0 ${space.S}px;
+    margin: ${space.L}px 0 ${space.S}px;
     font-size: ${fontSize.L};
 
     &:first-child {
@@ -118,6 +122,22 @@ const Html = styled.div`
 
     p {
       margin: 0;
+    }
+  }
+
+  img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 500px;
+    margin-left: ${space.XS}px;
+    /* box-shadow: 0 0 ${space.XS}px ${color.BLUE}; */
+
+    @media screen and (max-width: ${media.BREAK_POINT}px) {
+      max-width: 100%;
+      max-height: 300px;
+      margin: 0 auto;
     }
   }
 `

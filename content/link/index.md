@@ -30,24 +30,9 @@ order: 1
 - [instagram](https://www.instagram.com/nabeliwo/)
 - [GitHub](https://github.com/nabeliwo)
 
-## 技術記事
+## 技術的発信
 
 最近は技術記事は自分のブログに書いているので以下のものはほぼ更新してませんが、過去に書いたものは消さずに残しています。
 
 - [Qiita](https://qiita.com/nabeliwo)
 - [Zenn](https://zenn.dev/nabeliwo)
-
-## 作ったもの
-
-仕事以外で作ったものを載せていきます。  
-仕事だとしても自分が作ったものとして公開できそうなもの(自己判断)であればここに載せておきます。
-
-- [react-minesweeper](https://nabeliwo.github.io/react-minesweeper/)
-  - React で作成したマインスイーパです
-  - なんかしらのゲーム作ってみようと思い立ってやったものです
-- [Web step sequencer built with React](https://cinnabar.nabeliwo.com/)
-  - React で作成したステップシーケンサーです
-  - 結構がっつり遊べるソフトウェアになっていて、個人的にとてもお気に入りです
-- [人労打](https://jinrouda.smarthr.co.jp/)
-  - SmartHR 社で作ったタイピングゲームです
-  - 自分は主に canvas 実装を担当しています
