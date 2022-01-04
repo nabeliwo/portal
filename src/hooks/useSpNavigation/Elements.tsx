@@ -6,6 +6,7 @@ import { SiteMapItem } from '../../libs/content'
 import { NavigationLayer } from './NavigationLayer'
 
 type Props = {
+  simpleMode: boolean
   siteMap: SiteMapItem[]
   started: boolean
   ended: boolean
@@ -13,13 +14,13 @@ type Props = {
   onClickClose: () => void
 }
 
-export const Elements: VFC<Props> = ({ siteMap, visible, started, ended, onClickClose }) => {
+export const Elements: VFC<Props> = ({ simpleMode, siteMap, visible, started, ended, onClickClose }) => {
   const sansStormClass = `${started ? 'started' : ''} ${ended ? 'ended' : ''}`
 
   return (
     <>
       <SandStorm className={sansStormClass} />
-      {visible && <NavigationLayer siteMap={siteMap} visible={visible} onClickClose={onClickClose} />}
+      {visible && <NavigationLayer simpleMode={simpleMode} siteMap={siteMap} visible={visible} onClickClose={onClickClose} />}
     </>
   )
 }

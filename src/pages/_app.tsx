@@ -6,16 +6,17 @@ import reset from 'styled-reset'
 import { SiteMapItem } from '../libs/content'
 import { color, media } from '../constants/theme'
 
+import { SimpleModeContextProvider } from '../context/simpleMode'
 import { ApplicationLayout } from '../components/layout/AppilcationLayout'
 
 const App: FC<AppProps> = ({ Component, pageProps }) => (
-  <>
+  <SimpleModeContextProvider>
     <GlobalStyle />
 
     <ApplicationLayout siteMap={pageProps.siteMap as SiteMapItem[]}>
       <Component {...pageProps} />
     </ApplicationLayout>
-  </>
+  </SimpleModeContextProvider>
 )
 
 export default App
@@ -35,7 +36,6 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     background: repeating-linear-gradient(to bottom, ${color.BLACK}, ${color.BLACK} 3px, ${color.GREY} 3px, ${color.GREY} 5px);
     color: ${color.BLUE};
-    font-family: PixelMplus12-Regular, system-ui, sans-serif;
     letter-spacing: 1px;
   }
   a {

@@ -131,8 +131,6 @@ const Html = styled.div`
     height: auto;
     max-width: 50%;
     max-height: 500px;
-    margin-left: ${space.XS}px;
-    /* box-shadow: 0 0 ${space.XS}px ${color.BLUE}; */
 
     @media screen and (max-width: ${media.BREAK_POINT}px) {
       max-width: 100%;

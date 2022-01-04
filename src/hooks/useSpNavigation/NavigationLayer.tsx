@@ -7,16 +7,17 @@ import { color } from '../../constants/theme'
 import { SpNavigation } from '../../components/ui/SpNavigation'
 
 type Props = {
+  simpleMode: boolean
   siteMap: SiteMapItem[]
   visible: boolean
   onClickClose: () => void
 }
 
-export const NavigationLayer: VFC<Props> = ({ siteMap, visible, onClickClose }) => {
+export const NavigationLayer: VFC<Props> = ({ simpleMode, siteMap, visible, onClickClose }) => {
   if (!visible) return null
 
   return (
-    <Wrapper>
+    <Wrapper className={simpleMode ? 'simpleMode' : ''}>
       <Inner>
         <SpMenuCloseButton onClick={onClickClose}>
           <CloseIcon />
@@ -110,6 +111,10 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   animation: ${blink} 4s infinite;
+
+  &.simpleMode {
+    animation: none;
+  }
 `
 const SpMenuCloseButton = styled.button`
   position: absolute;

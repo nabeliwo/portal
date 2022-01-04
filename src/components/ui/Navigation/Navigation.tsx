@@ -27,7 +27,7 @@ export const Navigation: VFC<Props> = ({ siteMap }) => {
   }
 
   return (
-    <Wrapper>
+    <NavigationWrapper>
       <ul>
         {siteMap.map(({ path, name, order }) => (
           <li key={`${path}-${order}`}>
@@ -37,11 +37,11 @@ export const Navigation: VFC<Props> = ({ siteMap }) => {
           </li>
         ))}
       </ul>
-    </Wrapper>
+    </NavigationWrapper>
   )
 }
 
-const Wrapper = styled.nav`
+const NavigationWrapper = styled.nav`
   padding-left: 8px;
   border-left: 4px solid ${color.BLUE};
 `

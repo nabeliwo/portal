@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { VFC } from 'react'
 import Link from 'next/link'
 import styled, { keyframes } from 'styled-components'
 
@@ -6,7 +6,11 @@ import { service } from '../../../constants/application'
 import { color, media } from '../../../constants/theme'
 import { useRouter } from 'next/dist/client/router'
 
-export const SiteTitle = () => {
+type Props = {
+  simpleMode: boolean
+}
+
+export const SiteTitle: VFC<Props> = ({ simpleMode }) => {
   const router = useRouter()
   const topPagePath = '/'
   const isTopPage = router.pathname === topPagePath
@@ -14,7 +18,7 @@ export const SiteTitle = () => {
   const title = (
     <TitleWrapper>
       <Title>{service.siteName}</Title>
-      <Cursor />
+      {!simpleMode && <Cursor />}
     </TitleWrapper>
   )
 
