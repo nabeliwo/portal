@@ -18,7 +18,7 @@ order: 1
 - [nabeliwo channel](https://www.youtube.com/channel/UCv4cE4hYqjX3viaU-8_gcVw)
   - PC 周りの機材やガジェットの紹介をしています
 - [ぺろりとなべりを](https://www.youtube.com/channel/UCduaE-71umSf3Bf-jpVqfcQ)
-  - [ぺろりさん](https://twitter.com/peroli_youtube)と一緒にゲーム実況をしています
+  - [ぺろりさん](https://twitter.com/peroli_gaming)と一緒にゲーム実況をしています
 
 ## SNS
 
