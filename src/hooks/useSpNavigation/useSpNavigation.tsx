@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 
 import { SiteMapItem } from '../../libs/content'
-import { simpleModeContext } from '../../context/simpleMode'
+import { useSimpleMode } from '../useSimpleMode'
 
 import { NavigationButton } from './NavigationButton'
 import { Elements } from './Elements'
@@ -13,7 +13,7 @@ export const useSpNavigation = (siteMap: SiteMapItem[]) => {
   const [visible, setVisible] = useState(false)
   const [started, setStarted] = useState(false)
   const [ended, setEnded] = useState(false)
-  const { simpleMode } = useContext(simpleModeContext)
+  const { simpleMode } = useSimpleMode()
 
   const handleClickNavigationButton = () => {
     setStarted(true)

@@ -1,0 +1,1 @@
+export { useSimpleMode } from './useSimpleMode'

@@ -1,11 +1,11 @@
-import React, { ReactNode, VFC, useContext } from 'react'
+import React, { ReactNode, VFC } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
 import { service } from '../../../constants/application'
 import { color, fontSize, media, space } from '../../../constants/theme'
 import { useSpNavigation } from '../../../hooks/useSpNavigation'
-import { simpleModeContext } from '../../../context/simpleMode'
+import { useSimpleMode } from '../../../hooks/useSimpleMode'
 
 import { WaveFrame } from '../../effect/WaveFrame'
 import { SiteTitle } from '../../ui/SiteTitle'
@@ -19,7 +19,7 @@ type Props = {
 
 export const ApplicationLayout: VFC<Props> = ({ siteMap, children }) => {
   const { navigationButton, elements } = useSpNavigation(siteMap)
-  const { simpleMode, setSimpleMode } = useContext(simpleModeContext)
+  const { simpleMode, setSimpleMode } = useSimpleMode()
 
   const simpleModeContent = (
     <>

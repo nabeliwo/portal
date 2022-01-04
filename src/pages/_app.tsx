@@ -6,17 +6,16 @@ import reset from 'styled-reset'
 import { SiteMapItem } from '../libs/content'
 import { color, media } from '../constants/theme'
 
-import { SimpleModeContextProvider } from '../context/simpleMode'
 import { ApplicationLayout } from '../components/layout/AppilcationLayout'
 
 const App: FC<AppProps> = ({ Component, pageProps }) => (
-  <SimpleModeContextProvider>
+  <>
     <GlobalStyle />
 
     <ApplicationLayout siteMap={pageProps.siteMap as SiteMapItem[]}>
       <Component {...pageProps} />
     </ApplicationLayout>
-  </SimpleModeContextProvider>
+  </>
 )
 
 export default App
