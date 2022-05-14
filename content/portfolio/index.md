@@ -22,12 +22,3 @@ React で作成したマインスイーパです。なんかしらのゲーム�
 [https://cinnabar.nabeliwo.com](https://cinnabar.nabeliwo.com)
 
 React で作成したステップシーケンサーです。結構がっつり遊べるソフトウェアになっていて、個人的にとてもお気に入りです。
-
-## 人労打
-
-![人労打](/images/content/portfolio/jinrouda.png "人労打")
-
-
-[https://jinrouda.smarthr.co.jp](https://jinrouda.smarthr.co.jp)
-
-SmartHR 社で作ったタイピングゲームです。自分は主に canvas 実装を担当しています。

@@ -70,11 +70,16 @@ const Html = styled.div`
 
   h2 {
     margin: ${space.L}px 0 ${space.S}px;
-    font-size: ${fontSize.L};
+    font-size: ${fontSize.XL};
 
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  h3 {
+    margin: ${space.M}px 0 ${space.S}px;
+    font-size: ${fontSize.L};
   }
 
   p {
