@@ -10,8 +10,8 @@ order: 1
 ## 3行でわかる nabeliwo とは
 
 このサイトの主。  
-本名は Hiroki Watanabe。千葉県在住、妻1人、子1人のソフトウェアエンジニア。  
-得意な技術領域はウェブフロントエンド。主に TypeScript, React, Node.js をメインに仕事をしています。
+本名は Hiroki Watanabe。1990年8月3日生まれ、千葉県在住、妻1人、子1人のソフトウェアエンジニア。  
+得意な技術領域はウェブフロントエンド。主に TypeScript, React, Node.js, Ruby, Ruby on Rails をメインに仕事をしています。
 
 ## このサイトについて
 
@@ -33,8 +33,6 @@ order: 1
 
 - [nabeliwo channel](https://www.youtube.com/channel/UCv4cE4hYqjX3viaU-8_gcVw)
   - PC 周りの機材やガジェットの紹介をしています
-- [ぺろりとなべりを](https://www.youtube.com/channel/UCduaE-71umSf3Bf-jpVqfcQ)
-  - [ぺろりさん](https://twitter.com/peroli_gaming)と一緒にゲーム実況をしています
 
 ### SNS
 
