@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { SiteMapItem } from '../../libs/content'
 import { useSimpleMode } from '../useSimpleMode'
 
-import { NavigationButton } from './NavigationButton'
 import { Elements } from './Elements'
+import { NavigationButton } from './NavigationButton'
 
 const VISIBLE_TIME = 800
 const END_TIME = 500

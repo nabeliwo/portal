@@ -1,12 +1,11 @@
-import React, { FC } from 'react'
 import { AppProps } from 'next/app'
+import React, { FC } from 'react'
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 
-import { SiteMapItem } from '../libs/content'
-import { color, media } from '../constants/theme'
-
 import { ApplicationLayout } from '../components/layout/AppilcationLayout'
+import { color, media } from '../constants/theme'
+import { SiteMapItem } from '../libs/content'
 
 const App: FC<AppProps> = ({ Component, pageProps }) => (
   <>

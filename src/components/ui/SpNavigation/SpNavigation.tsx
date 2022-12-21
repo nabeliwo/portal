@@ -2,8 +2,8 @@ import { useRouter } from 'next/dist/client/router'
 import React, { VFC } from 'react'
 import styled from 'styled-components'
 
-import { SiteMapItem } from '../../../libs/content'
 import { color, space } from '../../../constants/theme'
+import { SiteMapItem } from '../../../libs/content'
 
 import { SpNavigationItem } from './SpNavigationItem'
 

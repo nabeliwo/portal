@@ -1,5 +1,5 @@
-import React, { VFC } from 'react'
 import Link from 'next/link'
+import React, { VFC } from 'react'
 import styled from 'styled-components'
 
 import { color, space } from '../../../constants/theme'
@@ -20,11 +20,7 @@ export const NavigationItem: VFC<Props> = ({ to, currentPath, children }) => {
     return item
   }
 
-  return (
-    <Link href={to}>
-      <a>{item}</a>
-    </Link>
-  )
+  return <Link href={to}>{item}</Link>
 }
 
 const Item = styled.span`

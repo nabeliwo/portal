@@ -1,16 +1,15 @@
-import React, { ReactNode, VFC } from 'react'
 import Link from 'next/link'
+import React, { ReactNode, VFC } from 'react'
 import styled from 'styled-components'
 
 import { service } from '../../../constants/application'
 import { color, fontSize, media, space } from '../../../constants/theme'
-import { useSpNavigation } from '../../../hooks/useSpNavigation'
 import { useSimpleMode } from '../../../hooks/useSimpleMode'
-
-import { WaveFrame } from '../../effect/WaveFrame'
-import { SiteTitle } from '../../ui/SiteTitle'
-import { Navigation } from '../../ui/Navigation'
+import { useSpNavigation } from '../../../hooks/useSpNavigation'
 import { SiteMapItem } from '../../../libs/content'
+import { WaveFrame } from '../../effect/WaveFrame'
+import { Navigation } from '../../ui/Navigation'
+import { SiteTitle } from '../../ui/SiteTitle'
 
 type Props = {
   siteMap: SiteMapItem[]
@@ -64,9 +63,7 @@ export const ApplicationLayout: VFC<Props> = ({ siteMap, children }) => {
               <FooterButtonList>
                 <li>
                   <Link href="/">
-                    <a>
-                      <FooterButton as="span">サイトトップへ</FooterButton>
-                    </a>
+                    <FooterButton as="span">サイトトップへ</FooterButton>
                   </Link>
                 </li>
                 <li>

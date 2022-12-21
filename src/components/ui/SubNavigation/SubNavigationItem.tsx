@@ -18,11 +18,7 @@ export const SubNavigationItem: VFC<Props> = ({ to, currentPath, children }) => 
     return item
   }
 
-  return (
-    <Link href={to}>
-      <a>{item}</a>
-    </Link>
-  )
+  return <Link href={to}>{item}</Link>
 }
 
 const Item = styled.span`

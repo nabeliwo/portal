@@ -1,10 +1,9 @@
 import { GetStaticProps } from 'next'
 import React, { VFC } from 'react'
 
-import { Content, getContent, getSiteMap } from '../libs/content'
-
 import { Head } from '../components/model/Head'
 import { Post } from '../components/model/Post'
+import { Content, getContent, getSiteMap } from '../libs/content'
 
 type Props = {
   content: Content

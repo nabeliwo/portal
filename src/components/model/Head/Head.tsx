@@ -1,5 +1,5 @@
-import React, { VFC } from 'react'
 import NextHead from 'next/head'
+import React, { VFC } from 'react'
 
 import { service } from '../../../constants/application'
 

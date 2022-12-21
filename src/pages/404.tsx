@@ -3,10 +3,9 @@ import React, { useEffect, useState } from 'react'
 import { VFXImg, VFXProvider } from 'react-vfx'
 import styled from 'styled-components'
 
-import { getSiteMap } from '../libs/content'
-import { media } from '../constants/theme'
-
 import { Head } from '../components/model/Head'
+import { media } from '../constants/theme'
+import { getSiteMap } from '../libs/content'
 
 const NotFound = () => {
   const [mounted, setMounted] = useState(false)

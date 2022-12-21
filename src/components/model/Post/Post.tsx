@@ -1,9 +1,8 @@
 import React, { VFC } from 'react'
 import styled from 'styled-components'
 
-import { Content, SiteMapItem } from '../../../libs/content'
 import { color, fontSize, media, space } from '../../../constants/theme'
-
+import { Content, SiteMapItem } from '../../../libs/content'
 import { SubNavigation } from '../../ui/SubNavigation'
 
 type Props = {

@@ -1,5 +1,5 @@
-import React, { VFC } from 'react'
 import Link from 'next/link'
+import React, { VFC } from 'react'
 import styled from 'styled-components'
 
 import { color, fontSize, space } from '../../../constants/theme'
@@ -22,8 +22,8 @@ export const SpNavigationItem: VFC<Props> = ({ to, currentPath, children, onClic
   }
 
   return (
-    <Link href={to}>
-      <a onClick={onClick}>{item}</a>
+    <Link href={to} onClick={onClick}>
+      {item}
     </Link>
   )
 }

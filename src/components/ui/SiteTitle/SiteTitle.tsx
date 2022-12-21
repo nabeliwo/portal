@@ -1,10 +1,10 @@
-import React, { VFC } from 'react'
+import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
+import React, { VFC } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 import { service } from '../../../constants/application'
 import { color, media } from '../../../constants/theme'
-import { useRouter } from 'next/dist/client/router'
 
 type Props = {
   simpleMode: boolean
@@ -28,7 +28,7 @@ export const SiteTitle: VFC<Props> = ({ simpleMode }) => {
 
   return (
     <p>
-      <Link href={topPagePath} passHref>
+      <Link href={topPagePath} passHref legacyBehavior>
         <Anchor>{title}</Anchor>
       </Link>
     </p>

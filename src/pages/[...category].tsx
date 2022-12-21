@@ -2,10 +2,9 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import React, { VFC } from 'react'
 
-import { Content, SiteMapItem, getAllContents, getContent, getSiteMap } from '../libs/content'
-
 import { Head } from '../components/model/Head'
 import { Post } from '../components/model/Post'
+import { Content, SiteMapItem, getAllContents, getContent, getSiteMap } from '../libs/content'
 
 type Props = {
   siteMap: SiteMapItem[]

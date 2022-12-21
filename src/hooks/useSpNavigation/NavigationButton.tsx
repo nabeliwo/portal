@@ -8,15 +8,15 @@ type Props = {
 }
 
 export const NavigationButton: VFC<Props> = ({ onClick }) => (
-  <Wrapper onClick={onClick}>
+  <Button onClick={onClick}>
     <span className="bar" />
     <span className="bar" />
     <span className="bar" />
     <span className="visuallyHidden">ナビゲーションメニューを開く</span>
-  </Wrapper>
+  </Button>
 )
 
-const Wrapper = styled.button`
+const Button = styled.button`
   position: relative;
   display: flex;
   align-items: center;

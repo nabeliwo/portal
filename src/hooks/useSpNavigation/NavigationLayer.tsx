@@ -1,10 +1,9 @@
 import React, { VFC } from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import { SiteMapItem } from '../../libs/content'
-import { color } from '../../constants/theme'
-
 import { SpNavigation } from '../../components/ui/SpNavigation'
+import { color } from '../../constants/theme'
+import { SiteMapItem } from '../../libs/content'
 
 type Props = {
   simpleMode: boolean
