@@ -21,10 +21,10 @@ const lineDirectionType = {
 const dpr = typeof window !== 'undefined' ? devicePixelRatio : 1
 const stepSize = 5 * dpr
 const lineWidth = 1 * dpr
-const weakShakeRunoutWidth = 5 * dpr
-const weakShakeFrameBuffer = 10
-const strongShakeRunoutWidth = space.M * dpr
-const strongShakeFrameBuffer = 20
+// const weakShakeRunoutWidth = 5 * dpr
+// const weakShakeFrameBuffer = 10
+// const strongShakeRunoutWidth = space.M * dpr
+// const strongShakeFrameBuffer = 20
 const minNoiseSize = 150 * dpr
 const endNoiseFrame = space.M * dpr
 
@@ -64,22 +64,22 @@ export class WaveLineRenderer {
     }
 
     const lineDirection = startPosition.x === endPosition.x ? lineDirectionType.vertical : lineDirectionType.horizontal
-    let baseLine: number = 0
+    // let baseLine: number = 0
     let noiseArray: Position[] = []
 
     ctx.lineWidth = lineWidth
     ctx.strokeStyle = color.BLUE
 
     if (lineDirection === lineDirectionType.horizontal) {
-      baseLine = this.getWeakShakeLine(frame, startPosition.y)
-      baseLine = this.getStrongShakeLine(frame, baseLine)
-      ctx.moveTo(startPosition.x, baseLine)
-      noiseArray = this.getNoiseArray(frame, startPosition.x, endPosition.x, baseLine, lineDirection, canvasSize)
+      // baseLine = this.getWeakShakeLine(frame, startPosition.y)
+      // baseLine = this.getStrongShakeLine(frame, baseLine)
+      ctx.moveTo(startPosition.x, startPosition.y)
+      noiseArray = this.getNoiseArray(frame, startPosition.x, endPosition.x, startPosition.y, lineDirection, canvasSize)
     } else if (lineDirection === lineDirectionType.vertical) {
-      baseLine = this.getWeakShakeLine(frame, startPosition.x)
-      baseLine = this.getStrongShakeLine(frame, baseLine)
-      ctx.moveTo(baseLine, startPosition.y)
-      noiseArray = this.getNoiseArray(frame, startPosition.y, endPosition.y, baseLine, lineDirection, canvasSize)
+      // baseLine = this.getWeakShakeLine(frame, startPosition.x)
+      // baseLine = this.getStrongShakeLine(frame, baseLine)
+      ctx.moveTo(startPosition.x, startPosition.y)
+      noiseArray = this.getNoiseArray(frame, startPosition.y, endPosition.y, startPosition.x, lineDirection, canvasSize)
     }
 
     if (noiseArray.length > 0) {
@@ -87,66 +87,66 @@ export class WaveLineRenderer {
       const lastPosition = noiseArray[noiseArray.length - 1]
 
       if (lineDirection === lineDirectionType.horizontal) {
-        ctx.lineTo(firstPosition.x - stepSize, baseLine)
+        ctx.lineTo(firstPosition.x - stepSize, startPosition.y)
 
         noiseArray.forEach(({ x, y }) => {
           ctx.lineTo(x, y)
         })
 
-        ctx.lineTo(lastPosition.x + stepSize, baseLine)
+        ctx.lineTo(lastPosition.x + stepSize, startPosition.y)
       } else if (lineDirection === lineDirectionType.vertical) {
-        ctx.lineTo(baseLine, firstPosition.y - stepSize)
+        ctx.lineTo(startPosition.x, firstPosition.y - stepSize)
 
         noiseArray.forEach(({ x, y }) => {
           ctx.lineTo(x, y)
         })
 
-        ctx.lineTo(baseLine, lastPosition.y + stepSize)
+        ctx.lineTo(startPosition.x, lastPosition.y + stepSize)
       }
     }
 
     if (lineDirection === lineDirectionType.horizontal) {
-      ctx.lineTo(endPosition.x, baseLine)
+      ctx.lineTo(endPosition.x, startPosition.y)
     } else if (lineDirection === lineDirectionType.vertical) {
-      ctx.lineTo(baseLine, endPosition.y)
+      ctx.lineTo(startPosition.x, endPosition.y)
     }
 
     ctx.stroke()
   }
 
-  getWeakShakeLine(frame: number, position: number) {
-    if (frame >= this.nextWeakShakeFrame) {
-      this.weakShakeFlag = true
-    }
+  // getWeakShakeLine(frame: number, position: number) {
+  //   if (frame >= this.nextWeakShakeFrame) {
+  //     this.weakShakeFlag = true
+  //   }
 
-    if (this.weakShakeFlag) {
-      position = getRandomNum(position - weakShakeRunoutWidth, position + weakShakeRunoutWidth)
-    }
+  //   if (this.weakShakeFlag) {
+  //     position = getRandomNum(position - weakShakeRunoutWidth, position + weakShakeRunoutWidth)
+  //   }
 
-    if (frame >= this.nextWeakShakeFrame + weakShakeFrameBuffer) {
-      this.weakShakeFlag = false
-      this.nextWeakShakeFrame = this.getNextActionFrame(actionType.weakShake, frame)
-    }
+  //   if (frame >= this.nextWeakShakeFrame + weakShakeFrameBuffer) {
+  //     this.weakShakeFlag = false
+  //     this.nextWeakShakeFrame = this.getNextActionFrame(actionType.weakShake, frame)
+  //   }
 
-    return position
-  }
+  //   return position
+  // }
 
-  getStrongShakeLine(frame: number, position: number) {
-    if (frame >= this.nextStrongShakeFrame) {
-      this.strongShakeFlag = true
-    }
+  // getStrongShakeLine(frame: number, position: number) {
+  //   if (frame >= this.nextStrongShakeFrame) {
+  //     this.strongShakeFlag = true
+  //   }
 
-    if (this.strongShakeFlag) {
-      position = getRandomNum(position - strongShakeRunoutWidth, position + strongShakeRunoutWidth)
-    }
+  //   if (this.strongShakeFlag) {
+  //     position = getRandomNum(position - strongShakeRunoutWidth, position + strongShakeRunoutWidth)
+  //   }
 
-    if (frame >= this.nextStrongShakeFrame + strongShakeFrameBuffer) {
-      this.strongShakeFlag = false
-      this.nextStrongShakeFrame = this.getNextActionFrame(actionType.strongShake, frame)
-    }
+  //   if (frame >= this.nextStrongShakeFrame + strongShakeFrameBuffer) {
+  //     this.strongShakeFlag = false
+  //     this.nextStrongShakeFrame = this.getNextActionFrame(actionType.strongShake, frame)
+  //   }
 
-    return position
-  }
+  //   return position
+  // }
 
   getNoiseArray(
     frame: number,
