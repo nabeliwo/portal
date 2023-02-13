@@ -4,20 +4,7 @@ description: "僕が作ったものをまとめています。"
 order: 1
 ---
 
-仕事以外で作ったものを載せていきます。
+個人、もしくは少人数のチームで作ったものを載せます。
 
-## react-minesweeper
-
-![react-minesweeper](/images/content/portfolio/react-minesweeper.png "react-minesweeper")
-
-[https://nabeliwo.github.io/react-minesweeper](https://nabeliwo.github.io/react-minesweeper)
-
-React で作成したマインスイーパです。なんかしらのゲーム作ってみようと思い立ってやったものです。
-
-## Web step sequencer built with React
-
-![web-step-sequencer](/images/content/portfolio/web-step-sequencer.png "web-step-sequencer")
-
-[https://cinnabar.nabeliwo.com](https://cinnabar.nabeliwo.com)
-
-React で作成したステップシーケンサーです。結構がっつり遊べるソフトウェアになっていて、個人的にとてもお気に入りです。
+何か刺さるものがあれば是非お仕事の連絡ください。  
+連絡は Twitter の DM か GMail (nabeliwo@) でよろしくお願いします。

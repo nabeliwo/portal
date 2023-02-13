@@ -23,7 +23,7 @@ export const Post: VFC<Props> = ({ content, categoryName = '', siteMap, isTopPag
       </NavigationWrapper>
     )}
 
-    {!isTopPage && !isCategoryTopPage && <Headline>{content.title}</Headline>}
+    {!isTopPage && !isCategoryTopPage && <Headline>「{content.title}」</Headline>}
 
     <Html dangerouslySetInnerHTML={{ __html: content.contentHtml }} />
   </>
@@ -40,7 +40,7 @@ const CategoryTitle = styled.p`
 `
 const NavigationWrapper = styled.div`
   &:not(:empty) {
-    margin-bottom: ${space.XL}px;
+    margin-bottom: ${space.L}px;
 
     @media screen and (max-width: ${media.BREAK_POINT}px) {
       margin-bottom: ${space.M}px;
@@ -48,7 +48,7 @@ const NavigationWrapper = styled.div`
   }
 `
 const Headline = styled.h1`
-  margin-bottom: ${space.XL}px;
+  margin-bottom: ${space.L}px;
   font-size: ${fontSize.XXL};
   line-height: 1;
 
