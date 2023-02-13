@@ -37,5 +37,6 @@ const Item = styled.span`
   @media screen and (max-width: ${media.BREAK_POINT}px) {
     padding: 4px 5px;
     font-size: ${fontSize.S};
+    line-height: 1.3;
   }
 `

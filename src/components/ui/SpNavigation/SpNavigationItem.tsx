@@ -33,6 +33,7 @@ const Item = styled.span`
   width: 200px;
   padding: ${space.XS}px;
   color: ${color.BLUE};
+  font-family: PixelMplus12-Regular, system-ui, sans-serif;
   font-size: ${fontSize.S}px;
   text-decoration: none;
 
